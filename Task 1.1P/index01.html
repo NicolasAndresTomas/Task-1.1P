@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task 1.1P</title>
+        
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center 0.01%;
+                background-color: white;
+                height: 100vh;
+                font-family: Courier New;
+            }
+
+            .navbar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                display: flex;
+                justify-content: flex-start;
+                padding: 20px;
+                z-index: 999;
+            }
+
+            .navbar ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
+
+            .navbar li {
+                margin-right: 20px;
+            }
+
+            .navbar a {
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+                font-size: 18px;
+            }
+            
+            .header-image {
+                position: relative;
+                width: 100%;
+                min-height: 50vh;
+                background-image: url('images/front-cover.png');
+                background-size: cover;
+                background-position: center;
+            }
+            
+            .header-image::after {
+                content: 'Hey, I\'m Nicolas';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 24px;
+                font-weight: bold;
+                color: white;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+            }
+        
+            .header-image:hover::after {
+                opacity: 1;
+            }
+            
+            .profile-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 50px;
+                text-align: center;
+            }
+        
+            .profile-photo {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                background-image: url('images/profile.png');
+                background-size: cover;
+                background-position: center;
+            }
+        
+            .job-description {
+                font-size: 20px;
+                font-weight: bold;
+                margin-top: 20px;
+                padding-bottom: 60px;
+            }
+            
+            .projects-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 50px;
+                padding-bottom: 60px;
+            }
+        
+            .project-card {
+                width: 300px;
+                margin: 20px;
+                background-color: #f2f2f2;
+                border-radius: 10px;
+                padding: 20px;
+                text-align: center;
+            }
+        
+            .project-photo-1 {
+                width: 200px;
+                height: 200px;
+                margin: 0 auto;
+                border-radius: 50%;
+                background-image: url('images/programming.png');
+                background-size: cover;
+                background-position: center;
+            }
+
+            .project-photo-2 {
+                width: 200px;
+                height: 200px;
+                margin: 0 auto;
+                border-radius: 50%;
+                background-image: url('images/network.png');
+                background-size: cover;
+                background-position: center;
+            }
+
+            .project-photo-3 {
+                width: 200px;
+                height: 200px;
+                margin: 0 auto;
+                border-radius: 50%;
+                background-image: url('images/database.png');
+                background-size: cover;
+                background-position: center;
+            }
+        
+            .project-name {
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 10px;
+            }
+        
+            .project-description {
+                margin-top: 10px;
+            }
+        
+            .github-link {
+                margin-top: 10px;
+            }
+        
+            .github-link a {
+                text-decoration: none;
+                color: blue;
+                font-weight: bold;
+            }
+            
+            .image-gallery {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 50px;
+            }
+        
+            .image-gallery-item {
+                width: 300px;
+                margin: 10px;
+            }
+        
+            .image-gallery-item img {
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+            }
+            
+            footer {
+                padding: 70px;
+                text-align: center;
+            }
+            
+            .title {
+                font-size: 25px;
+                margin-top: 60px;
+                font-weight: bold;      
+            }
+
+            .horizontal-line {
+                width: 400px;
+                color: black;
+                size: 10;
+            }
+        
+            @media screen and (max-width: 600px) {
+                .image-gallery-item {
+                    width: 100%;
+                }
+            }
+        </style>
+    </head> 
+
+    <body>   
+        <div class=navbar>
+            <ul>
+                <li>
+                    <a class="active" href="#">About</a> 
+                </li>
+
+                <li>
+                    <a class="first" href="#">Work</a>
+                </li>
+
+                 <li>
+                    <a class="first" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="header-image"></div>
+        
+        <div class="profile-container">
+            <div class="profile-photo"></div>
+            <div class="job-description">I am a full-stack web developer based in Melbourne, Australia</div>
+        </div>
+        
+        <hr class="horizontal-line"> 
+
+        <div class="title">Here is what I've done so far</div>
+        
+        <div class="projects-container">
+            <div class="project-card">
+                <div class="project-photo-1"></div>
+                <div class="project-name">Programming</div>
+                <div class="project-description">Multi-Page Responsive Website</div>
+                <div class="github-link"><a href="#">GitHub Link</a></div>
+            </div>
+            <div class="project-card">
+                <div class="project-photo-2"></div>
+                <div class="project-name">Networking</div>
+                <div class="project-description">Network Monitoring System</div>
+                <div class="github-link"><a href="#">GitHub Link</a></div>
+            </div>
+            <div class="project-card">
+                <div class="project-photo-3"></div>
+                <div class="project-name">Database</div>
+                <div class="project-description">Electricity Bill Management System</div>
+                <div class="github-link"><a href="#">GitHub Link</a></div>
+            </div>
+        </div>
+
+        <hr class="horizontal-line"> 
+
+        <div class="title">My photos</div>
+        
+        <div class="image-gallery">
+            <div class="image-gallery-item">
+                <img src="images/img1.jpg" alt="Image 1">
+            </div>
+            <div class="image-gallery-item">
+                <img src="images/img2.jpg" alt="Image 2">
+            </div>
+            <div class="image-gallery-item">
+                <img src="images/img3.jpg" alt="Image 3">
+            </div>
+            <div class="image-gallery-item">
+                <img src="images/img4.jpg" alt="Image 4">
+            </div>
+            <div class="image-gallery-item">
+                <img src="images/img5.jpg" alt="Image 5">
+            </div>
+            <div class="image-gallery-item">
+                <img src="images/img6.jpg" alt="Image 6">
+            </div>
+        </div>
+        
+        <footer>
+            <p>© Nicolas Andres Tomas 2023</p>
+        </footer>
+    </body>
+</html>
